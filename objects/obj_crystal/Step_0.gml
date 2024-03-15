@@ -13,7 +13,7 @@ if (active)
 {
 	active = false;
 	reset = true;
-	alarm[2] = 1000;
+	alarm[2] = 10;
 	var _dir = pointdir	
 	var _inst = instance_create_layer(x+lengthdir_x(10,image_angle),y+lengthdir_y(10,image_angle), "Bullets", obj_enemybullet);
 	_inst.speed = 6
@@ -26,7 +26,4 @@ if (crystal_hp == 0)
 {
 	instance_destroy()
 }
-
-crystal_hp += 0.05;
-
 image_alpha = crystal_hp/10

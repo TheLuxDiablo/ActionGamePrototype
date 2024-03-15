@@ -1,0 +1,12 @@
+[
+ {
+   "Enemy Name": "Jeremy",
+   "Health": 5,
+   "Speed": 2
+ },
+ {
+   "Enemy Name": "Glass",
+   "Health": 1,
+   "Speed": 4
+ }
+]
