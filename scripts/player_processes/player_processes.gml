@@ -40,10 +40,10 @@ function collision() {
 	var _disy = abs(_ty - y);
 	
 	repeat(_disx) {
-		if !place_meeting(x + sign(_tx - x), y, obj_solid) x += sign(_tx - x);
+		if !place_meeting(x + sign(_tx - x), y, other) x += sign(_tx - x);
 	}
 	repeat (_disy) {
-		if !place_meeting(x, y + sign(_ty - y), obj_solid) y += sign(_ty - y);
+		if !place_meeting(x, y + sign(_ty - y), other) y += sign(_ty - y);
 	}
 }
 
@@ -65,11 +65,11 @@ function check_fire() {
 			alarm[0] = fire_rate;
 			
 			var _dir = point_direction(x, y, (mouse_x + random_range(-5,5)), mouse_y);
-			var _fx = instance_create_layer(x+lengthdir_x(30,obj_playergun.image_angle),y+lengthdir_y(50,obj_playergun.image_angle), "Bullets", obj_bullet_explode);
-			with (_fx) {
-				direction = _dir;
-				image_angle = _dir;
-			}
+			//var _fx = instance_create_layer(x+lengthdir_x(30,obj_playergun.image_angle),y+lengthdir_y(50,obj_playergun.image_angle), "Bullets", obj_bullet_explode);
+			//with (_fx) {
+			//	direction = _dir;
+			//	image_angle = _dir;
+			//}
 			var _inst = instance_create_layer(x+lengthdir_x(30,obj_playergun.image_angle),y+lengthdir_y(30,obj_playergun.image_angle), "Bullets", obj_bullet);
 			with (_inst) {
 				speed = other.bullet_speed;

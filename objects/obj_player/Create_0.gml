@@ -9,7 +9,7 @@ global.playerHealthMax = global.playerHealth;
 healthbar_width = 100;
 healthbar_height = 12;
 
-healthbar_x = x;
+healthbar_x = x
 healthbar_y = y
 
 global.facing = 1;
